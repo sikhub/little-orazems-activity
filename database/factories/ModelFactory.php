@@ -22,3 +22,21 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Activities::class, function (Faker\Generator $faker) {
+    $name = $faker->sentence;
+
+    return [
+        'name' => $name,
+        'slug' => str_slug($name),
+    ];
+});
+
+$factory->define(App\Schedules::class, function (Faker\Generator $faker) {
+    return [
+        'activity_start' => $faker->dateTimeBetween('now', \Carbon\Carbon::parse("+1 year")),
+        'activity_id' => function() {
+            return factory(App\Activities::class)->create()->id;
+        }
+    ];
+});

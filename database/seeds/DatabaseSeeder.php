@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        factory(App\Activities::class, rand(10, 70))->create()->each(function ($a) {
+            factory(App\Schedules::class, rand(10,70))->create(['activity_id' => $a->id]);
+        });
     }
 }

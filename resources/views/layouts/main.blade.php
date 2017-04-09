@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Little Orazem's Activities</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- Bootstrap -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
@@ -19,15 +19,9 @@
 </head>
 <body>
 
+    @include('partials.nav')
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                Little Orazem's Activity
-            </div>
-            <div class="col-md-6">
-                <a href="{{ route('import') }}" class="btn btn-primary pull-right">Uvozi CSV</a>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-12">
                 @yield('content')

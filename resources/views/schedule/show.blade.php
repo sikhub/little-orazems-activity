@@ -10,4 +10,6 @@
             <li class="list-group-item">Trenutno za to aktivnost ni razpisanih datumov.</li>
         @endforelse
     </ul>
+
+    <a href="{{ route('home') }}" class="btn btn-primary">Nazaj na seznam</a>
 @endsection

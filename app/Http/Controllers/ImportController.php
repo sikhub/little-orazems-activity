@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Activities;
 use App\Http\Requests\ImportRequest;
-use App\Schedules;
 use Excel;
 use Maatwebsite\Excel\Exceptions\LaravelExcelException;
 use Carbon\Carbon;

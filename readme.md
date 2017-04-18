@@ -1,7 +1,7 @@
 # Little Orazem's Activity
 <img src="https://raw.githubusercontent.com/sikhub/little-orazems-activity/master/public/images/orazem.png" data-canonical-src="https://raw.githubusercontent.com/sikhub/little-orazems-activity/master/public/images/orazem.png" width="150" style="margin:0 auto;"/>
 
-## Server pecifications
+## Server specifications
 
 Developed on Vagrant Homestead box (2.0.0)
 
